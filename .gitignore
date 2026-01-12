@@ -1,0 +1,30 @@
+# filepath: c:\Users\celes\cbt_pred_platform\.gitignore
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# Environment (contains secrets)
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# AWS
+.aws/
+
+# Test outputs
+*.parquet
+*.csv
+tests/sample_data/output/
+
+# Logs
+*.log
+
+# Lambda deployment package
+lambda_package.zip
