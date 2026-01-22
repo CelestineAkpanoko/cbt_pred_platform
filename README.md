@@ -81,11 +81,11 @@ The tests confirm that:
 
 If all tests pass, the pipeline is producing valid, model-compatible inputs and is safe to use for training or inference.
 
-# The folder structure within the cbt_pred_platform is as follows:
-# Folder structure for cbt_pred_platform
+## Folder structure for cbt_pred_platform
 
+cbt_pred_platform/
 ├── data/
-│   └── raw/                      # PROSPIE-derived processed training data from an external experiment
+│   └── raw/                      # PROSPIE-derived processed training data (external experiment)
 │
 ├── fitbit_to_aws_s3/             # Fitbit multi-user ingestion pipeline
 │   ├── main.py                   # FastAPI OAuth2 server for Fitbit user onboarding
@@ -106,7 +106,7 @@ If all tests pass, the pipeline is producing valid, model-compatible inputs and 
 ├── src/                          # Core package: features, serving, training
 │   ├── features/                 # Feature engineering and transformation logic
 │   │   ├── __init__.py
-│   │   └── transformations.py   # Converts preprocessed data into model-ready features
+│   │   └── transformations.py    # Converts preprocessed data into model-ready features
 │   │
 │   ├── serving/                  # Lambda serving components (API + data loaders)
 │   │   ├── __init__.py
@@ -119,7 +119,7 @@ If all tests pass, the pipeline is producing valid, model-compatible inputs and 
 │       ├── evaluate.py           # Model performance evaluation
 │       ├── finetune_model.py     # Optional fine-tuning logic
 │       ├── prepare_data.py       # Training data assembly and alignment
-│       ├── prepare_external_data.py # External dataset preparation (e.g., PROSBE)
+│       ├── prepare_external_data.py # External dataset preparation (e.g., PROSPIE)
 │       └── train_model.py        # Model training entry point
 │
 ├── tests/                        # Feature transformation and loader validation
