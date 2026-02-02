@@ -134,7 +134,45 @@ cbt_pred_platform/
 
 ## 4. Status 🚧
 
-The inference pipeline for testing CBT predictions is currently under development.
+### Production Deployment (In Progress)
+
+The full AWS Lambda deployment for real-time CBT predictions is currently under development.
+
+### Local Testing (Available Now) ✅
+
+You can test the **model inference pipeline locally** using Docker while production deployment is being finalized.
+
+**Quick Start:**
+```powershell
+# Start the local Lambda API
+docker-compose up --build
+
+# Test predictions (in new terminal)
+python test_local_api.py --all
+```
+
+📖 **See the complete guide:** [Docker Setup for Local Testing](DOCKER_SETUP.md)
+
+The Docker setup provides:
+- ✅ Full Lambda runtime environment (Python 3.11)
+- ✅ Model loading from local files
+- ✅ Health check and prediction endpoints
+- ✅ Test suite with multiple physiological scenarios
+- ✅ Hot reload for development
+
+This allows you to validate the inference pipeline, test predictions, and develop features without deploying to AWS.
+
+---
+
+## 5. Local Development with Docker
+
+For detailed instructions on:
+- Setting up the Docker environment
+- Running prediction tests
+- Troubleshooting common issues
+- Making code changes with hot reload
+
+**👉 Read the full guide:** [DOCKER_SETUP.md](DOCKER_SETUP.md)
 
 
 
