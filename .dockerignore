@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.egg-info
+.eggs
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv
+venv
+env
+.conda
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Data (too large for Docker image)
+data/
+*.csv
+*.parquet
+
+# Notebooks
+notebooks/
+*.ipynb
+
+# Tests
+tests/
+pytest_cache/
+.coverage
+
+# Logs
+logs/
+*.log
+
+# Don't ignore these
+!models/study_model_v1/
+!requirements-lambda.txt
+!docker/

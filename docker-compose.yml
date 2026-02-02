@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  cbt-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:8080"
+    environment:
+      - LOCAL_MODEL_DIR=/var/task/models
+    volumes:
+      - ./models/study_model_v1:/var/task/models:ro
+    develop:
+      watch:
+        - action: rebuild
+          path: ./src/serving
+        - action: rebuild
+          path: ./src/features
+        - action: rebuild
+          path: ./requirements-lambda.txt
